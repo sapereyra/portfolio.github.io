@@ -310,8 +310,7 @@ html{
         text-align: center;
     }
     .habilidades .contenido-seccion .fila .col .cont-barra{
-        justify-cont
-        .sobreent: center;
+        justify-content: center;
     }
     .sobremi .contenido-seccion .fila{
         display: block;
