@@ -1,6 +1,6 @@
 //Menu Lateral
 var menu_visible = false;
-let menu =document.getElementById("nav");
+let menu = document.getElementById("nav");
 function mostrarOcultarMenu(){
     if(menu_visible==false){//si esta oculto
         menu.style.display = "block";
@@ -15,7 +15,7 @@ function mostrarOcultarMenu(){
 let links = document.querySelectorAll("nav a");
 for(var x = 0; x <links.length;x++){
     links[x].onclick = function(){
-        menu.style.display ="none";
+        menu.style.display = "none";
         menu_visible = false;
     }
 }
@@ -44,7 +44,7 @@ crearBarra(ilustrator);
 //ahora voy a guardar a cantidad de barritas que se van a ir pintando por cada barra
 //para eso utilizo un arreglo, cada posicion pertenece a un elemento
 //comienzan con -1 porque no tiene ninguna pintada al iniciarse
-let contadores = (-1,-1,-1,-1,-1,-1);
+let contadores = [-1,-1,-1,-1,-1,-1];
 //esta variable la vamos a utilizar de bandera para saber si ya ejecuto la animacion
 let entro = false;
 
@@ -55,22 +55,22 @@ function efectoHabilidades(){
     if(distancia_skills>=300 && entro==false){
         entro = true;
         const intervalJavascript = setInterval(function(){
-            pintarBarra(javascript, 16, 0, intervalJavascript);
+            pintarBarra(javascript, 11, 1, intervalJavascript);
         },100);
         const intervalHtml = setInterval(function(){
             pintarBarra(html, 16, 0, intervalHtml);
         },100);
         const intervalWordpress = setInterval(function(){
-            pintarBarra(wordpress, 16, 0, intervalWordpress);
+            pintarBarra(wordpress, 11, 2, intervalWordpress);
         },100);
         const intervalPhotoshop = setInterval(function(){
-            pintarBarra(photoshop, 16, 0, intervalPhotoshop);
+            pintarBarra(photoshop, 15, 3, intervalPhotoshop);
         },100);
         const intervalPhp = setInterval(function(){
-            pintarBarra(php, 16, 0, intervalPhp);
+            pintarBarra(php, 16, 4, intervalPhp);
         },100);
         const intervalIlustrator = setInterval(function(){
-            pintarBarra(ilustrator, 16, 0, intervalIlustrator);
+            pintarBarra(ilustrator, 11, 5, intervalIlustrator);
         },100);
     }
 }
